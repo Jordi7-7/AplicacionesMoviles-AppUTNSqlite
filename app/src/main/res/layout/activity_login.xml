@@ -1,0 +1,65 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:id="@+id/main">
+
+    <!-- Logo o imagen de la app -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="App Logo" />
+
+    <!-- Campo de nombre de usuario -->
+    <EditText
+        android:id="@+id/txtUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de usuario"
+        android:inputType="text"
+        android:drawableLeft="@android:drawable/ic_menu_info_details"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Campo de contraseña -->
+    <EditText
+        android:id="@+id/txtClave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:drawableLeft="@android:drawable/ic_lock_lock"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón de inicio de sesión -->
+    <Button
+        android:id="@+id/cmdLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:onClick="cmdLogin_onClick"
+        android:text="Iniciar sesión"
+        android:textColor="@android:color/white" />
+
+    <!-- Texto para "¿Olvidaste tu contraseña?" -->
+
+    <!-- Texto para registrarse -->
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿No tienes cuenta? Regístrate"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16sp"
+        android:clickable="true" />
+</LinearLayout>
