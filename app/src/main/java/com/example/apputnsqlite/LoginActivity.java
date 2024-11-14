@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void cmdLogin_onClick(View v){
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, AutoresActivity.class);
 
         i.putExtra("usuario", txtUsuario.getText().toString());
         i.putExtra("clave", txtClave.getText().toString());

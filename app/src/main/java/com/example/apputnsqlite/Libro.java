@@ -18,4 +18,6 @@ public class Libro {
         Revision = revision;
         NroHojas = nroHojas;
     }
+
+
 }

@@ -1,0 +1,11 @@
+<!-- res/menu/bottom_nav_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_libros"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Libros" />
+    <item
+        android:id="@+id/navigation_autores"
+        android:icon="@drawable/ic_launcher_foreground"
+    android:title="Autores" />
+</menu>

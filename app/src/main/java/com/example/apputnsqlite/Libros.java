@@ -74,6 +74,35 @@ public class Libros {
         return datos;
     }
 
+    public Libro[] Read_ByAutor(int idAutor) {
+        Cursor cursor = null;
+        Libro[] libros = null;
+
+        try {
+            cursor = db.rawQuery("SELECT * FROM libros WHERE idAutor=" + idAutor + " ORDER BY titulo", null);
+            libros = new Libro[cursor.getCount()];
+            int i = 0;
+
+            while (cursor.moveToNext()) {
+                libros[i++] = new Libro(
+                        cursor.getInt(0),  // Id
+                        cursor.getString(1),  // Titulo
+                        cursor.getInt(2),  // IdAutor
+                        cursor.getString(3),  // ISBN
+                        cursor.getInt(4),  // Año Publicación
+                        cursor.getInt(5),  // Revisión
+                        cursor.getInt(6)   // Nro Hojas
+                );
+            }
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+
+        return libros;
+    }
+
     public boolean Delete(int id) {
         int r = db.delete("libros", "id=" + id, null);
         return r > 0;

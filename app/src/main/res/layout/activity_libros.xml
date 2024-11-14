@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LibrosActivity">
+
+    <!-- Título Principal -->
+    <TextView
+        android:id="@+id/lblTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido Anónimo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Campo ID del Libro -->
+    <TextView
+        android:id="@+id/textViewID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        app:layout_constraintTop_toBottomOf="@id/lblTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/txtID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/lblTitulo"
+        app:layout_constraintStart_toEndOf="@id/textViewID"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Campo Título del Libro -->
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Título"
+        app:layout_constraintTop_toBottomOf="@id/textViewID"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/txtID"
+        app:layout_constraintStart_toEndOf="@id/textViewTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Campo ID del Autor -->
+    <TextView
+        android:id="@+id/textViewIdAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID Autor"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/txtIdAutor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+        app:layout_constraintStart_toEndOf="@id/textViewIdAutor"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Campo ISBN -->
+    <TextView
+        android:id="@+id/textViewIsbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ISBN"
+        app:layout_constraintTop_toBottomOf="@id/textViewIdAutor"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/txtIsbn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/txtIdAutor"
+        app:layout_constraintStart_toEndOf="@id/textViewIsbn"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Campo Año de Publicación -->
+    <TextView
+        android:id="@+id/textViewAnioPublicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Año Publicación"
+        app:layout_constraintTop_toBottomOf="@id/textViewIsbn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/txtAnioPublicacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/txtIsbn"
+        app:layout_constraintStart_toEndOf="@id/textViewAnioPublicacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Campo Revisión -->
+    <TextView
+        android:id="@+id/textViewRevision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Revisión"
+        app:layout_constraintTop_toBottomOf="@id/textViewAnioPublicacion"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/txtRevision"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/txtAnioPublicacion"
+        app:layout_constraintStart_toEndOf="@id/textViewRevision"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Campo Número de Hojas -->
+    <TextView
+        android:id="@+id/textViewNroHojas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nro. Hojas"
+        app:layout_constraintTop_toBottomOf="@id/textViewRevision"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/txtNroHojas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/txtRevision"
+        app:layout_constraintStart_toEndOf="@id/textViewNroHojas"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Botones de acción -->
+    <Button
+        android:id="@+id/cmdCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear"
+        app:layout_constraintTop_toBottomOf="@id/txtNroHojas"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/cmdActualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar"
+        app:layout_constraintTop_toBottomOf="@id/txtNroHojas"
+        app:layout_constraintStart_toEndOf="@id/cmdCrear"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp" />
+
+    <Button
+        android:id="@+id/cmdLeer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leer"
+        app:layout_constraintTop_toBottomOf="@id/txtNroHojas"
+        app:layout_constraintStart_toEndOf="@id/cmdActualizar"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp" />
+
+    <Button
+        android:id="@+id/cmdEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        app:layout_constraintTop_toBottomOf="@id/txtNroHojas"
+        app:layout_constraintStart_toEndOf="@id/cmdLeer"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Barra de navegación inferior -->
+    <include
+        layout="@layout/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
